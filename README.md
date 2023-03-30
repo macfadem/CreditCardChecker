@@ -16,7 +16,7 @@ A simple webpage to check if a credit card number is valid or not.
 
 This webpage uses JavaScript to validate the credit card number using the Luhn algorithm.
 
-``javascript
+```javascript
 validateCreditCard = (cardNumber) => {
     cardNumber = cardNumber.replace(/\D/g, '');
     let sum = 0;
@@ -33,7 +33,7 @@ validateCreditCard = (cardNumber) => {
     }
     return sum % 10 === 0;
 };
-``
+```
 
 ## Technologies Used
 
