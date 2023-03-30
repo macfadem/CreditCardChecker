@@ -1,4 +1,5 @@
 validateCreditCard = (cardNumber) => {
+    cardNumber = cardNumber.replace(/\D/g, '');
     let sum = 0;
     let shouldDouble = false;
     for (let i = cardNumber.length - 1; i >= 0; i--) {
@@ -15,10 +16,10 @@ validateCreditCard = (cardNumber) => {
 };
 
 const cardNumberInput = document.getElementById('cardNumber');
-  const submitBtn = document.getElementById('submitBtn');
+const submitBtn = document.getElementById('submitBtn');
   
-  submitBtn.addEventListener('click', (event) => {
-    event.preventDefault(); // Prevent the form from submitting
+submitBtn.addEventListener('click', (event) => {
+    event.preventDefault();
     
     const cardNumber = cardNumberInput.value;
     const isValid = validateCreditCard(cardNumber);
@@ -28,4 +29,4 @@ const cardNumberInput = document.getElementById('cardNumber');
     } else {
       alert('Invalid credit card number');
     }
-  });
+});
